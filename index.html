@@ -26,7 +26,7 @@
 
 
 
-			<div class="flexInput">
+		<div class="flexInput">
 
 				<div class="item" id="one">
 					<img class="pin" src="images/Pin.svg" title="Map Pin">
@@ -34,20 +34,21 @@
 
 				<div  class="item" id="two">
 					<form>
-						<input id="txt" type="text" name="search">
+						<input id="txt" type="text" name="search" placeholder="Marseille...">
 					</form> 
+					<ul class="list-group" id="list"></ul>
 				</div>
 
 				<div  class="item" id="three">
-					<button id="srch" type="submit">Search</button>
+					<button id="srch" type="submit" onclick="search()">Search</button>
 				</div>
 			</div>
-
+			
 
 			<div class = "flexContainer" >
 				<h4 class="filter" id="filterText">Filters</h4>
 				
-					<div class="flexflexContainer">
+					<div class="flexflexContainer" id="lowCost-el" onclick="lowCostFilter()">
 				
 						<i class="fa-solid fa-money-bill-wave filterIcon" ></i>
 						<h4 class="filter">Low cost</h4>
@@ -55,21 +56,21 @@
 				
 				
 				
-				<div class="flexflexContainer">
+				<div class="flexflexContainer" id="familyFriendly-el" onclick="familyFilter()">
 				
 						<i class="fa-solid fa-child filterIcon"></i>
 						<h4 class="filter">Family-friendly</h4>
 					</div>
 
-				<div class="flexflexContainer">
+				<div class="flexflexContainer" id="romantic-el" onclick="romanticFilter()">
 				
 						<i class="fa-solid fa-heart filterIcon"></i>
 						<h4 class="filter">Romantic</h4>
 					</div>
 
-				<div class="flexflexContainer">
+				<div class="flexflexContainer" id="pets-el" onclick="petsFilter()">
 				
-						<i class="fa-solid fa-dog filterIcon"></i>
+						<i class="fa-solid fa-dog filterIcon" ></i>
 						<h4 class="filter">Pets allowed</h4>
 					</div>
 
@@ -83,7 +84,7 @@
 		</section>
 		<section>
 			<div id="mainFlex">
-			<h3 id="accMove">Accomodations in Marseille</h3>
+			<h3 id="accMove">Accomodations in <span class="city">Marseille</span></h3>
 			<div id="mostPopularHolder">
 
 				<h3 id="mostPopular">Most Popular</h3>
@@ -91,22 +92,22 @@
 			</div>
 			
 			<article id="firstArticle">
-				<div class="imageFlex">
+				<div class="imageFlex" id="first">
 					<img class="imageAc" src="images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg">
 					<p class="title"><strong>Auberge la Cannebiere</strong></p>
-					<p class="description">Night starting at <strong>25€</strong></p>
+					<p class="description">Night starting at <strong class="price">25</strong><strong>€</strong></p>
 					<div class="starsDiv">
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star grayClass"></i>
+						<i class="fa-solid fa-star"></i>
 					</div>
 				</div>
-				<div class="imageFlex">
+				<div class="imageFlex" id="second">
 					<img class="imageAc" src="images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg">
 					<p class="title"><strong>Hôtel du port</strong></p>
-					<p class="description">Night starting at <strong>52€</strong></p>
+					<p class="description">Night starting at <strong class="price">52</strong><strong>€</strong></p>
 					<div class="starsDiv">
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
@@ -116,52 +117,52 @@
 					</div>
 
 				</div>
-				<div class="imageFlex">
+				<div class="imageFlex" id="third">
 					<img class="imageAc" src="images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg">
 					<p class="title"><strong>Les mouettes Hotel</strong></p>
-					<p class="description">Night starting at <strong>76€</strong></p>
+					<p class="description">Night starting at <strong class="price">76</strong><strong>€</strong></p>
 					<div class="starsDiv">
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star grayClass"></i>
+						<i class="fa-solid fa-star"></i>
 					</div>
 
 
 				</div>
 				
-				<div class="imageFlex">
+				<div class="imageFlex" id="forth">
 					<img class="imageAc" src="images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
 					<p class="title"><strong>Hôtel de la mer</strong></p>
-					<p class="description">Night starting at <strong>46€</strong></p>
+					<p class="description">Night starting at <strong class="price">46</strong><strong>€</strong></p>
 					<div class="starsDiv">
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star grayClass"></i>
-						<i class="fa-solid fa-star grayClass"></i>
+						<i class="fa-solid fa-star "></i>
+						<i class="fa-solid fa-star "></i>
 					</div>
 
 				</div>
 				
-				<div class="imageFlex">
+				<div class="imageFlex" id="fifth">
 					<img class="imageAc" src="images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg">
 					<p class="title"><strong>Auberge Le Panier</strong></p>
-					<p class="description">Night starting at <strong>23€</strong></p>
+					<p class="description">Night starting at <strong class="price">23</strong><strong>€</strong></p>
 					<div class="starsDiv">
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star grayClass"></i>
+						<i class="fa-solid fa-star"></i>
 					</div>
 
 				</div>
-				<div class="imageFlex">
+				<div class="imageFlex" id="sixth">
 					<img class="imageAc" src="images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg">
 					<p class="title"><strong>Hôtel chez Amina</strong></p>
-					<p class="description">Night starting at <strong>96€</strong></p>
+					<p class="description">Night starting at <strong class="price">96</strong><strong>€</strong></p>
 					<div class="starsDiv">
 						<i class="fa-solid fa-star"></i>
 						<i class="fa-solid fa-star"></i>
@@ -171,7 +172,46 @@
 					</div>
 
 				</div>
-				<h4 id="showMore">Show more</h4>
+				<div class="imageFlex" id="seventh">
+					<img class="imageAc" src="images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg">
+					<p class="title"><strong>Hôtel chez Amina</strong></p>
+					<p class="description">Night starting at <strong class="price">96</strong><strong>€</strong></p>
+					<div class="starsDiv">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</div>
+
+				</div>
+				<div class="imageFlex" id="eight">
+					<img class="imageAc" src="images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg">
+					<p class="title"><strong>Hôtel chez Amina</strong></p>
+					<p class="description">Night starting at <strong class="price">96</strong><strong>€</strong></p>
+					<div class="starsDiv">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</div>
+
+				</div>
+				<div class="imageFlex" id="ninth">
+					<img class="imageAc" src="images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg">
+					<p class="title"><strong>Hôtel chez Amina</strong></p>
+					<p class="description">Night starting at <strong class="price">96</strong><strong>€</strong></p>
+					<div class="starsDiv">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</div>
+
+				</div>
+				<h4 id="showMore" onclick="showMoreClick()">Show more</h4>
 			</article>
 
 			<article id="secondArticle">
@@ -181,7 +221,7 @@
 						<img class="mostPopularImage" src="images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg">
 						<div class="popularTextFlex">
 							<p class="description popularHeader"><strong>Morning Sun Hotel</strong></p>
-							<p class="description">Night starting at <strong>128€</strong></p>
+							<p class="description">Night starting at <strong>128</strong><strong>€</strong></p>
 							<div class="starsDiv2">
 								<i class="fa-solid fa-star"></i>
 								<i class="fa-solid fa-star "></i>
@@ -196,13 +236,13 @@
 						<img class="mostPopularImage" src="images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg">
 						<div class="popularTextFlex">
 							<p class="description popularHeader"><strong>Au cœur l'eau Bed and Breakfast</strong></p>
-							<p class="description addon">Night starting at <strong>71€</strong></p>
+							<p class="description addon">Night starting at <strong>71</strong><strong>€</strong></p>
 							<div class="starsDiv2">
 								<i class="fa-solid fa-star"></i>
 								<i class="fa-solid fa-star "></i>
 								<i class="fa-solid fa-star "></i>
 								<i class="fa-solid fa-star "></i>
-								<i class="fa-solid fa-star grayClass"></i>
+								<i class="fa-solid fa-star "></i>
 							</div>
 						</div>
 					</div>
@@ -213,13 +253,13 @@
 							<p class="description popularHeader"><strong>
 								Tout bleu et Blanc Hotel
 							</strong></p>
-							<p class="description addon">Night starting at <strong>68€</strong></p>
+							<p class="description addon">Night starting at <strong>68</strong><strong>€</strong></p>
 							<div class="starsDiv2">
 								<i class="fa-solid fa-star"></i>
 								<i class="fa-solid fa-star "></i>
 								<i class="fa-solid fa-star "></i>
 								<i class="fa-solid fa-star "></i>
-								<i class="fa-solid fa-star grayClass"></i>
+								<i class="fa-solid fa-star "></i>
 							</div>
 						</div>
 					</div>
@@ -227,7 +267,7 @@
 			</article>
 			</div>
 			<article id="thirdActicle">
-				<h3 id="accMoveAddition">Activites in Marseille</h3>
+				<h3 id="accMoveAddition">Activites in <span class="city">Marseille</span></h3>
 				<div id="thirdFlex">
 					<div class="bigImageFlex">
 						<img class="bigImage" src="images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg">
@@ -296,6 +336,6 @@
 
 
 
-
+		<script type="text/javascript" src="./script.js"></script>
 	</body>
 	</html>

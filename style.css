@@ -1,3 +1,8 @@
+:root{
+	--filter-color: #deebff;
+}
+
+
 *{
 	font-family: Raleway,Ariel,sans-serif;
 	box-sizing: border-box;
@@ -93,6 +98,7 @@ h3{
 	border-radius: 8.5px 0px 0px 8.5px;
 	padding: 12px 20px;
 
+	height: 100%;
 
 }
 
@@ -168,7 +174,6 @@ h3{
 	padding-bottom: 10px;
 	padding-right: 20px;
 	padding-top: -10px;
-
 }
 
 #filterText{
@@ -180,7 +185,7 @@ h3{
 		display: inline-flex;
 		flex-wrap: wrap;
 		width: 870px;
-		height: 510px;
+		height: auto;
 		border-bottom-left-radius: 15px;
 		border-bottom-right-radius: 15px;
 		background-color: #f2f2f2;
@@ -201,6 +206,7 @@ h3{
 	margin-left: 20px;
 	margin-bottom: 20px;
 	padding: 6px;
+	height: 209px;
 	background-color: white;
 
 }
@@ -318,11 +324,8 @@ color: #d9d9d9;
 	padding-left: 30px;
 	width: 870px;
 	padding-top: 25px;
-	
-	
-
-
 }
+
 .addon{
 	margin-top: -20px;
 }
@@ -444,10 +447,27 @@ footer{
 	border-bottom-right-radius: 15px;
 	margin-left: 70px;
 }
+.flexContainer :active{
+	background-color: var(--filter-color);
+}
 
-
-
-
+.flexContainer :hover{
+	background-color: var(--filter-color);
+}
+.title{
+	font-weight: 700;
+}
+li{
+	color:#0065FC;
+	margin-bottom: 0px;
+	background-color: #F2F2F2;
+}
+li:hover{
+	font-size: 17px;
+}
+#showMore:hover{
+	color:#0065FC;
+}
 
 
 @media screen and (max-width: 1300px) {
@@ -479,7 +499,7 @@ footer{
   	margin: auto;
   }
   .flexInput{
-  	display: flex;x
+  	display: flex;
   	justify-content: center;
   }
 
@@ -524,6 +544,7 @@ footer{
   }
   .imageFlex{
   	width: 262px;
+	  
   	margin-left: 0px;
   }
   #mostPopular{
@@ -612,6 +633,7 @@ footer{
 		margin-left: -50px;
 	
 	}
+
 	
 
 	
@@ -622,7 +644,7 @@ footer{
 
 
 
-}
+
 
 
 
